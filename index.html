@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+
+<html lang="el">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Ιδιαίτερα Μαθήματα Φυσικής | Γυμνάσιο, Λύκειο, Φοιτητές</title>
+<meta content="Ιδιαίτερα μαθήματα Φυσικής για Γυμνάσιο, Λύκειο και φοιτητές. Μεθοδική διδασκαλία, κάλυψη κενών, Τράπεζα Θεμάτων και προετοιμασία Πανελληνίων." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<meta content="Ιδιαίτερα Μαθήματα Φυσικής" name="author"/>
+<link href="assets/logo-idiaitera-fysikis.svg" rel="icon" type="image/svg+xml"/>
+<link href="assets/logo-idiaitera-fysikis.svg" rel="apple-touch-icon"/>
+<meta content="el_GR" property="og:locale"/>
+<meta content="website" property="og:type"/>
+<meta content="Ιδιαίτερα Μαθήματα Φυσικής" property="og:site_name"/>
+<meta content="Ιδιαίτερα Μαθήματα Φυσικής" property="og:title"/>
+<meta content="Φυσική για Γυμνάσιο, Λύκειο και φοιτητές με μεθοδική διδασκαλία, Τράπεζα Θεμάτων, Πανελλήνιες και διαδραστικά εργαλεία." property="og:description"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Ιδιαίτερα Μαθήματα Φυσικής" name="twitter:title"/>
+<meta content="Προετοιμασία Φυσικής για Γυμνάσιο, Λύκειο, Πανελλήνιες και φοιτητές." name="twitter:description"/>
+<meta content="#FF7E79" name="theme-color"/>
+<meta content="dark light" name="color-scheme"/>
+<style>
+  :root{
+   --accent:#FF7E79;
+   --accent2:#7AD7FF;
+   --mint:#7AFFD0;
+   --ink:#625C5C;
+   --bg:#09090d;
+   --bg2:#101018;
+   --text:rgba(255,255,255,.94);
+   --muted:rgba(255,255,255,.70);
+   --soft:rgba(255,255,255,.55);
+   --card:rgba(255,255,255,.075);
+   --card2:rgba(255,255,255,.115);
+   --stroke:rgba(255,255,255,.14);
+   --stroke2:rgba(255,255,255,.22);
+   --shadow:0 24px 80px rgba(0,0,0,.44);
+   --radius:22px;
+   --radius2:30px;
+   --maxw:1160px;
+   --topbarH:64px;
+   --h1:clamp(34px,5vw,66px);
+   --h2:clamp(25px,3vw,38px);
+   --lead:clamp(16px,1.4vw,20px);
+   --ui:clamp(14px,1.1vw,16px);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(var(--topbarH) + 18px)}
+  body{
+   margin:0;
+   font:500 var(--ui)/1.58 ui-sans-serif,system-ui,-apple-system,"SF Pro Display","SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+   color:var(--text);
+   background:
+    radial-gradient(1100px 720px at 15% -10%, rgba(255,126,121,.20), transparent 62%),
+    radial-gradient(900px 620px at 90% 10%, rgba(122,215,255,.16), transparent 62%),
+    linear-gradient(180deg,#07070b 0%,#0b0b11 46%,#0c0910 100%);
+   overflow-x:hidden;
+  }
+  body:before{
+   content:"";position:fixed;inset:0;z-index:-2;
+   background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+   background-size:72px 72px;
+   mask-image:linear-gradient(180deg,rgba(0,0,0,.8),rgba(0,0,0,.08));
+   pointer-events:none;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 18px}
+  .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+  .skip:focus{left:18px;top:18px;width:auto;height:auto;background:#111;color:white;padding:10px 14px;border-radius:14px;z-index:9999}
+
+  .topbar{
+   position:fixed;top:0;left:0;right:0;z-index:1000;
+   backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+   background:linear-gradient(180deg,rgba(9,9,13,.82),rgba(9,9,13,.46));
+   border-bottom:1px solid rgba(255,255,255,.11);
+  }
+  .topbar .inner{height:var(--topbarH);display:flex;align-items:center;justify-content:space-between;gap:14px}
+  .brand{display:flex;align-items:center;text-decoration:none;min-width:260px}
+  .brandLogo{display:block;width:260px;height:52px;object-fit:contain;filter:drop-shadow(0 12px 30px rgba(255,126,121,.18))}
+  .brand b{letter-spacing:.2px;display:block;line-height:1.1}
+  .brand small{display:block;color:var(--muted);font-weight:650;font-size:12px;margin-top:3px;white-space:nowrap}
+  nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+  nav a{font-weight:800;text-decoration:none;padding:8px 10px;border-radius:13px;color:rgba(255,255,255,.86);white-space:nowrap;border:1px solid transparent;transition:.15s ease}
+  nav a:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12);transform:translateY(-1px)}
+  .topbarSpacer{height:var(--topbarH)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:white;border-radius:16px;padding:11px 14px;font-weight:900;letter-spacing:.15px;box-shadow:0 12px 36px rgba(0,0,0,.18);cursor:pointer;transition:.15s ease;min-height:44px}
+  .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.24)}
+  .btn.primary{border-color:rgba(255,126,121,.44);background:linear-gradient(135deg,rgba(255,126,121,.95),rgba(255,126,121,.62));box-shadow:0 16px 45px rgba(255,126,121,.20)}
+  .btn.ghost{background:rgba(255,255,255,.035)}
+  .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:var(--muted);font-weight:850;font-size:13px}
+  .dot{width:8px;height:8px;border-radius:99px;background:var(--accent);box-shadow:0 0 18px rgba(255,126,121,.72)}
+
+  .section{position:relative;padding:76px 0;scroll-margin-top:calc(var(--topbarH) + 18px)}
+  .section:before{content:"";position:absolute;inset:0;z-index:-1;background:var(--section-bg,transparent);pointer-events:none}
+  .hero{padding:76px 0 52px;min-height:calc(100vh - var(--topbarH));display:grid;align-items:center}
+  .heroGrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);gap:28px;align-items:center}
+  .kicker{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+  h1,h2,h3,p{margin-top:0}
+  h1{font-size:var(--h1);line-height:1.03;letter-spacing:-1.4px;margin-bottom:20px}
+  h2{font-size:var(--h2);line-height:1.12;letter-spacing:-.7px;margin-bottom:12px}
+  h3{font-size:19px;line-height:1.22;margin-bottom:8px}
+  .lead{font-size:var(--lead);color:rgba(255,255,255,.76);max-width:920px}
+  .grad{background:linear-gradient(135deg,#fff 0%,#fff 34%,var(--accent) 62%,#ffd0cd 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .heroActions{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 18px}
+  .micro{color:var(--soft);font-size:13px;font-weight:700}
+  .hero .micro{max-width:650px}
+
+  .glass{position:relative;border:1px solid var(--stroke);background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.045));border-radius:var(--radius2);box-shadow:var(--shadow);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);overflow:hidden}
+  .glass:after{content:"";position:absolute;inset:-1px;border-radius:inherit;pointer-events:none;background:radial-gradient(720px 240px at 20% 0%, rgba(255,255,255,.18), transparent 52%),radial-gradient(460px 240px at 90% 15%, rgba(255,126,121,.14), transparent 66%)}
+  .heroCard{padding:20px;min-height:520px;display:grid;grid-template-rows:auto 1fr auto;gap:16px}
+  .heroCard > *{position:relative;z-index:2}
+  .dashTop{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .status{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.78);font-size:13px;font-weight:850}
+  .heroVisual{display:grid;gap:14px;align-content:center}
+  .orbit{
+   position:relative;height:210px;border-radius:26px;border:1px solid rgba(255,255,255,.12);
+   background:radial-gradient(circle at 50% 50%, rgba(255,126,121,.10), transparent 28%),linear-gradient(180deg,rgba(255,255,255,.055),rgba(0,0,0,.08));
+   overflow:hidden;
+  }
+  .orbit:before,.orbit:after{content:"";position:absolute;border:1px dashed rgba(255,255,255,.18);border-radius:50%;inset:28px 34px;transform:rotate(-10deg)}
+  .orbit:after{inset:55px 88px;opacity:.72;transform:rotate(16deg)}
+  .node{position:absolute;display:flex;align-items:center;justify-content:center;border-radius:22px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);font-weight:950;text-align:center;box-shadow:0 18px 50px rgba(0,0,0,.25)}
+  .node.big{left:50%;top:50%;transform:translate(-50%,-50%);width:96px;height:96px;background:linear-gradient(135deg,rgba(255,126,121,.45),rgba(122,215,255,.16))}
+  .node.a{left:28px;top:28px;width:92px;height:54px}.node.b{right:28px;top:35px;width:102px;height:54px}.node.c{left:44px;bottom:28px;width:126px;height:54px}.node.d{right:42px;bottom:26px;width:124px;height:54px}
+  .metricGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .metric{padding:14px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.055)}
+  .metric b{font-size:22px;display:block}.metric span{color:var(--muted);font-size:12px;font-weight:800}
+
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .card{border:1px solid var(--stroke);background:linear-gradient(180deg,rgba(255,255,255,.085),rgba(255,255,255,.045));border-radius:var(--radius);padding:18px;box-shadow:0 18px 56px rgba(0,0,0,.22);position:relative;overflow:hidden}
+  .card:before{content:"";position:absolute;inset:0;background:radial-gradient(420px 140px at 18% 0%, rgba(255,255,255,.08), transparent 62%);pointer-events:none}
+  .card > *{position:relative;z-index:2}
+  .card p{color:rgba(255,255,255,.70);margin-bottom:0}
+  .tagline{color:var(--accent);font-weight:950;text-transform:uppercase;letter-spacing:.08em;font-size:12px;margin-bottom:8px}
+  ul.clean{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px}
+  ul.clean li{position:relative;padding-left:22px;color:rgba(255,255,255,.73)}
+  ul.clean li:before{content:"";position:absolute;left:0;top:.7em;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 16px rgba(255,126,121,.65)}
+  .wideTitle{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:22px}
+  .wideTitle .lead{margin-bottom:0}
+
+  #classes{--section-bg:radial-gradient(900px 520px at 15% 20%, rgba(255,126,121,.11), transparent 62%),radial-gradient(760px 420px at 90% 80%, rgba(122,215,255,.10), transparent 64%)}
+  .classCard{min-height:380px;display:flex;flex-direction:column;gap:12px}
+  .classHead{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+  .classMark{width:52px;height:52px;border-radius:18px;display:grid;place-items:center;font-size:25px;font-weight:1000;background:linear-gradient(135deg,rgba(255,126,121,.95),rgba(255,126,121,.45));border:1px solid rgba(255,255,255,.18)}
+  .classCard .btn{margin-top:auto;width:100%}
+
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;counter-reset:step}
+  .step{padding:16px;border-radius:20px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.055);min-height:146px;counter-increment:step}
+  .step:before{content:counter(step);display:grid;place-items:center;width:30px;height:30px;border-radius:11px;background:rgba(255,126,121,.20);border:1px solid rgba(255,126,121,.36);font-weight:1000;margin-bottom:12px;color:#fff}
+  .step b{display:block;margin-bottom:6px}.step span{color:var(--muted);font-size:13px}
+
+  .appLab{display:grid;grid-template-columns:minmax(0,1fr) minmax(330px,.8fr);gap:16px;align-items:stretch}
+  .simPanel{padding:18px;border-radius:var(--radius2);border:1px solid var(--stroke);background:linear-gradient(180deg,rgba(255,255,255,.085),rgba(255,255,255,.04));box-shadow:var(--shadow)}
+  canvas{width:100%;height:260px;border-radius:22px;border:1px solid rgba(255,255,255,.14);background:radial-gradient(circle at 80% 20%,rgba(122,215,255,.10),transparent 38%),linear-gradient(180deg,rgba(255,255,255,.055),rgba(0,0,0,.12));display:block}
+  .controls{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+  .sliderLabel{display:grid;gap:7px;color:rgba(255,255,255,.78);font-weight:800;font-size:13px}
+  input[type="range"]{accent-color:var(--accent);width:100%}
+  .formula{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:rgba(0,0,0,.20);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:12px;color:rgba(255,255,255,.84);margin-top:12px;overflow:auto}
+  .appList{display:grid;gap:10px}
+  .appItem{display:flex;align-items:flex-start;gap:12px;padding:13px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.055)}
+  .appIcon{width:42px;height:42px;flex:0 0 42px;border-radius:15px;display:grid;place-items:center;background:rgba(255,126,121,.18);border:1px solid rgba(255,126,121,.30);font-size:20px}
+  .appItem b{display:block}.appItem small{display:block;color:var(--muted);font-weight:700;line-height:1.4;margin-top:3px}
+
+  #areas{--section-bg:radial-gradient(900px 520px at 18% 20%, rgba(122,255,208,.08), transparent 62%),radial-gradient(820px 520px at 88% 70%, rgba(255,126,121,.10), transparent 62%)}
+  .mapLike{min-height:310px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .areaBox{border-radius:22px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.055);padding:18px}
+  .areaChips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.areaChips span{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.055);padding:7px 10px;border-radius:999px;color:rgba(255,255,255,.76);font-weight:800;font-size:13px}
+
+  .finder{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px;align-items:stretch}
+  .field{display:grid;gap:7px;margin-bottom:12px}
+  label{font-weight:900;color:rgba(255,255,255,.78);font-size:13px}
+  input,select,textarea{width:100%;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);color:white;border-radius:16px;padding:13px 14px;font:inherit;outline:none}
+  select option{color:#111;background:white}
+  textarea{min-height:130px;resize:vertical}
+  input:focus,select:focus,textarea:focus{border-color:rgba(255,126,121,.58);box-shadow:0 0 0 4px rgba(255,126,121,.10)}
+  .resultBox{border-radius:22px;border:1px solid rgba(255,255,255,.13);background:rgba(0,0,0,.18);padding:18px;min-height:100%}
+  .resultBox h3{margin-bottom:10px}.resultBox .clean{margin-top:8px}
+
+  .faq{display:grid;gap:10px}
+  details{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.055);border-radius:18px;padding:13px 15px}
+  summary{font-weight:950;cursor:pointer}details p{color:var(--muted);margin:10px 0 0}
+
+  .contactGrid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px}
+  .notice{border:1px solid rgba(122,255,208,.18);background:rgba(122,255,208,.055);border-radius:18px;padding:13px;color:rgba(255,255,255,.76);font-size:13px;font-weight:700}
+  .toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%) translateY(24px);opacity:0;pointer-events:none;z-index:2000;background:rgba(15,15,20,.92);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:13px 16px;box-shadow:var(--shadow);transition:.18s ease;max-width:min(92vw,520px)}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  footer{padding:28px 0 44px;border-top:1px solid rgba(255,255,255,.10);color:rgba(255,255,255,.62)}
+  footer .foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+  footer a{color:rgba(255,255,255,.78);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.18)}
+
+  @media (max-width:980px){
+   .heroGrid,.appLab,.finder,.contactGrid{grid-template-columns:1fr}
+   .grid3{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.mapLike{grid-template-columns:1fr}
+   .heroCard{min-height:auto}.orbit{height:220px}
+   nav{display:none}.brand{min-width:auto}.topbar .inner{height:62px}.topbarSpacer{height:62px}
+  }
+  @media (max-width:620px){
+   .section{padding:58px 0}.hero{padding:42px 0}.steps{grid-template-columns:1fr}.metricGrid{grid-template-columns:1fr}.controls{grid-template-columns:1fr}
+   .heroActions .btn{width:100%}.wideTitle{display:block}.node.big{width:82px;height:82px}.node.a,.node.b,.node.c,.node.d{font-size:12px;width:96px}.orbit{height:260px}.node.a{left:14px}.node.b{right:14px}.node.c{left:14px}.node.d{right:14px}
+   .brand small{display:none}
+  }
+ 
+  .seoBlock{margin-top:18px;color:rgba(255,255,255,.74)}
+  .seoBlock strong{color:rgba(255,255,255,.92)}
+  .trustGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px;align-items:stretch}
+  @media (max-width:980px){.trustGrid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "name": "Ιδιαίτερα Μαθήματα Φυσικής",
+   "inLanguage": "el-GR"
+  },
+  {
+   "@type": "WebPage",
+   "name": "Ιδιαίτερα Μαθήματα Φυσικής",
+   "description": "Ιδιαίτερα μαθήματα Φυσικής για Γυμνάσιο, Λύκειο και φοιτητές, με Τράπεζα Θεμάτων, Πανελλήνιες και πανεπιστημιακή υποστήριξη.",
+   "inLanguage": "el-GR"
+  },
+  {
+   "@type": [
+    "EducationalOrganization",
+    "ProfessionalService"
+   ],
+   "name": "Ιδιαίτερα Μαθήματα Φυσικής",
+   "description": "Ιδιαίτερα μαθήματα Φυσικής για Γυμνάσιο, Λύκειο και φοιτητές με μεθοδική διδασκαλία, ασκήσεις, Τράπεζα Θεμάτων και προετοιμασία Πανελληνίων.",
+   "availableLanguage": [
+    "el",
+    "en"
+   ],
+   "serviceType": [
+    "Ιδιαίτερα μαθήματα Φυσικής Γυμνασίου",
+    "Ιδιαίτερα μαθήματα Φυσικής Λυκείου",
+    "Προετοιμασία Φυσικής Πανελληνίων",
+    "Υποστήριξη φοιτητών σε μαθήματα Φυσικής"
+   ],
+   "makesOffer": [
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "Ιδιαίτερα Φυσικής Γυμνασίου"
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "Ιδιαίτερα Φυσικής Λυκείου"
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "Υποστήριξη φοιτητών στη Φυσική"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "Person",
+   "name": "Παναγιώτης Κατσούλης",
+   "jobTitle": "Καθηγητής Φυσικής",
+   "knowsAbout": [
+    "Φυσική Γυμνασίου",
+    "Φυσική Λυκείου",
+    "Πανελλήνιες Φυσικής",
+    "Πανεπιστημιακή Φυσική",
+    "Ηλεκτρονική Αυτοματοποίηση"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Γίνονται ιδιαίτερα μαθήματα Φυσικής Γυμνασίου;",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ναι. Υπάρχει υποστήριξη για μαθητές Γυμνασίου, με έμφαση στην κατανόηση βασικών εννοιών και στην κάλυψη κενών πριν το Λύκειο."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Αναλαμβάνονται φοιτητές;",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ναι, για βασικά πανεπιστημιακά μαθήματα Φυσικής, ανάλογα με την ύλη του τμήματος και το επίπεδο δυσκολίας."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Πώς δουλεύεται η Τράπεζα Θεμάτων;",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Τα θέματα ταξινομούνται ανά έννοια, τύπο ερωτήματος και δυσκολία, ώστε ο μαθητής να αποκτήσει μέθοδο και αυτονομία."
+     }
+    }
+   ]
+  }
+ ]
+}</script></head>
+<body>
+<a class="skip" href="#main">Μετάβαση στο περιεχόμενο</a>
+<header aria-label="Κύρια πλοήγηση" class="topbar">
+<div class="wrap inner">
+<a aria-label="Ιδιαίτερα Μαθήματα Φυσικής" class="brand js-sfx" href="#top"><img alt="Ιδιαίτερα Μαθήματα Φυσικής" class="brandLogo" src="assets/logo-idiaitera-fysikis.svg"/></a>
+<nav>
+<a class="js-sfx" href="#classes">Τάξεις</a>
+<a class="js-sfx" href="#method">Μέθοδος</a>
+<a class="js-sfx" href="#apps">Προσομοιώσεις</a>
+<a class="js-sfx" href="#teacher">Καθηγητής</a><a class="js-sfx" href="#contact">Επικοινωνία</a>
+</nav>
+</div>
+</header>
+<div class="topbarSpacer" id="top"></div>
+<main id="main">
+<section class="hero">
+<div class="wrap heroGrid">
+<div>
+<div class="kicker">
+<span class="pill"><span class="dot"></span> Γυμνάσιο • Λύκειο • Φοιτητές</span>
+<span class="pill">Τράπεζα Θεμάτων</span>
+<span class="pill">Πανελλήνιες 2002–σήμερα</span>
+</div>
+<h1>Ιδιαίτερα <span class="grad">Μαθήματα Φυσικής</span> για μαθητές και φοιτητές.</h1>
+<p class="lead">Στοχευμένη προετοιμασία Φυσικής για Γυμνάσιο, Α΄, Β΄ και Γ΄ Λυκείου, αλλά και υποστήριξη φοιτητών σε βασικά πανεπιστημιακά μαθήματα Φυσικής. Το μάθημα συνδυάζει καθαρή μεθοδολογία, διαγράμματα, ασκήσεις κλιμακωτής δυσκολίας και διαδραστικά εργαλεία διδασκαλίας.</p>
+<div class="heroActions">
+<a class="btn primary js-sfx" href="#contact">Ζήτησε ενημέρωση</a>
+<a class="btn ghost js-sfx" href="#finder">Βρες πρόγραμμα μαθήματος</a>
+</div>
+<p class="micro">Καθαρή μεθοδολογία, στοχευμένη εξάσκηση και σταδιακή οργάνωση της ύλης ανά επίπεδο.</p><p class="seoBlock" id="seo-intro-text"><strong>Αναζητάς καθηγητή Φυσικής για ιδιαίτερα;</strong> Το πρόγραμμα απευθύνεται σε μαθητές Γυμνασίου και Λυκείου που χρειάζονται σταθερή υποστήριξη στη Φυσική, από κάλυψη κενών μέχρι απαιτητική προετοιμασία για Πανελλήνιες, αλλά και σε φοιτητές που θέλουν βοήθεια σε βασικά μαθήματα Φυσικής.</p>
+</div>
+<aside aria-label="Σύνοψη υπηρεσίας" class="glass heroCard">
+<div class="dashTop">
+<span class="status"><span class="dot"></span> Διαδραστική προετοιμασία</span>
+<span class="pill">Physics • STEM</span>
+</div>
+<div class="heroVisual">
+<div aria-hidden="true" class="orbit">
+<div class="node big">Φυσική<br/>Μαθήματα</div>
+<div class="node a">Σχολικό</div>
+<div class="node b">Τράπεζα</div>
+<div class="node c">Προσομοιώσεις</div>
+<div class="node d">Πανελλήνιες</div>
+</div>
+<div class="metricGrid">
+<div class="metric"><b>3+</b><span>επίπεδα σπουδών</span></div>
+<div class="metric"><b>2002+</b><span>θέματα Γ΄</span></div>
+<div class="metric"><b>STEM</b><span>οπτικά εργαλεία</span></div>
+</div>
+</div>
+<div class="notice"><b>Στόχος:</b> ο μαθητής να μη μαθαίνει απλώς λύσεις, αλλά να αναγνωρίζει τύπους θεμάτων, να ελέγχει τα δεδομένα, να στήνει σωστά εξισώσεις και να εξηγεί φυσικά το αποτέλεσμα.</div>
+</aside>
+</div>
+</section>
+<section class="section" id="classes">
+<div class="wrap">
+<div class="wideTitle">
+<div>
+<div class="tagline">Πρόγραμμα ανά επίπεδο</div>
+<h2>Από τη βάση του Γυμνασίου μέχρι τις Πανελλήνιες και τα πρώτα πανεπιστημιακά μαθήματα.</h2>
+</div>
+<p class="lead">Κάθε επίπεδο δουλεύεται με σαφή κλιμάκωση: κατανόηση έννοιας, μεθοδολογία ασκήσεων, τυποποίηση λαθών και θέματα διαβαθμισμένης δυσκολίας.</p>
+</div>
+<div class="grid3">
+<article class="card classCard">
+<div class="classHead"><div><div class="tagline">Α΄ Λυκείου</div><h3>Σχολικό + νέο πρόγραμμα + Τράπεζα Θεμάτων</h3></div><div class="classMark">Α</div></div>
+<p>Σταθερή θεμελίωση στη μηχανική και στις βασικές μεθόδους λύσης. Ιδιαίτερη έμφαση στην ανάγνωση εκφώνησης, στις μονάδες, στα διαγράμματα και στη σωστή επιλογή σχέσεων.</p>
+<ul class="clean">
+<li>Ευθύγραμμες κινήσεις, διαγράμματα x–t και υ–t.</li>
+<li>Δυνάμεις, ισορροπία, νόμοι Νεύτωνα και εφαρμογές.</li>
+<li>Έργο, ενέργεια, ισχύς και αρχές διατήρησης όπου απαιτούνται.</li>
+<li>Προετοιμασία σε θέματα σχολικού και Τράπεζας Θεμάτων.</li>
+</ul>
+<a class="btn js-sfx" data-class="Α΄ Λυκείου" href="#contact">Ενδιαφέρομαι για Α΄ Λυκείου</a>
+</article>
+<article class="card classCard">
+<div class="classHead"><div><div class="tagline">Β΄ Λυκείου</div><h3>Σχολικό + Τράπεζα + γέφυρα προς Γ΄</h3></div><div class="classMark">Β</div></div>
+<p>Δουλειά πάνω στις απαιτήσεις της τάξης, με παράλληλη ενίσχυση της μαθηματικής και φυσικής σκέψης που θα χρειαστεί στη Γ΄ Λυκείου.</p>
+<ul class="clean">
+<li>Μεθοδική επανάληψη προαπαιτούμενων από Α΄ Λυκείου.</li>
+<li>Σταδιακή εκμάθηση ασκήσεων σχολικού και θεμάτων Τράπεζας.</li>
+<li>Εστίαση σε ηλεκτρισμό, μηχανική ή άλλη ύλη που ορίζει το σχολείο/πρόγραμμα.</li>
+<li>Πρόγραμμα ενίσχυσης για μαθητές που θέλουν ισχυρή εκκίνηση στη Γ΄.</li>
+</ul>
+<a class="btn js-sfx" data-class="Β΄ Λυκείου" href="#contact">Ενδιαφέρομαι για Β΄ Λυκείου</a>
+</article>
+<article class="card classCard">
+<div class="classHead"><div><div class="tagline">Γ΄ Λυκείου</div><h3>Τράπεζα + Πανελλήνιες 2002–σήμερα</h3></div><div class="classMark">Γ</div></div>
+<p>Οργανωμένη προετοιμασία για τις Πανελλήνιες με πλήρη χαρτογράφηση θεμάτων, επαναλαμβανόμενων μοτίβων και απαιτητικών συνδυαστικών ασκήσεων.</p>
+<ul class="clean">
+<li>Ύλη Προσανατολισμού με καθαρή εννοιολογική βάση.</li>
+<li>Όλα τα διαθέσιμα θέματα Πανελληνίων από το 2002 έως σήμερα.</li>
+<li>Ανάλυση ανά κεφάλαιο, ανά τύπο ερωτήματος και ανά επίπεδο δυσκολίας.</li>
+<li>Προσομοιώσεις διαγωνισμάτων με χρόνο, βαθμολόγηση και διόρθωση λαθών.</li>
+</ul>
+<a class="btn js-sfx" data-class="Γ΄ Λυκείου" href="#contact">Ενδιαφέρομαι για Γ΄ Λυκείου</a>
+</article>
+</div>
+<div class="grid2" style="margin-top:18px">
+<article class="card classCard">
+<div class="classHead"><div><div class="tagline">Γυμνάσιο</div><h3>Βάσεις Φυσικής χωρίς κενά</h3></div><div class="classMark">ΓΥΜ</div></div>
+<p>Υποστήριξη στη Φυσική Γυμνασίου με απλή γλώσσα, σωστή κατανόηση των βασικών εννοιών και εξάσκηση σε σχολικές ασκήσεις.</p>
+<ul class="clean">
+<li>Ενέργεια, θερμότητα, δυνάμεις, πίεση, ηλεκτρισμός και βασικές μετρήσεις.</li>
+<li>Οργάνωση τετραδίου, μονάδες, τύποι και φυσική ερμηνεία.</li>
+<li>Κάλυψη κενών πριν ο μαθητής περάσει στο Λύκειο.</li>
+</ul>
+<a class="btn js-sfx" data-class="Γυμνάσιο" href="#contact">Ενδιαφέρομαι για Γυμνάσιο</a>
+</article>
+<article class="card classCard">
+<div class="classHead"><div><div class="tagline">Φοιτητές</div><h3>Υποστήριξη σε βασικά πανεπιστημιακά μαθήματα Φυσικής</h3></div><div class="classMark">UNI</div></div>
+<p>Μαθήματα για φοιτητές που χρειάζονται βοήθεια σε εισαγωγικά ή βασικά μαθήματα Φυσικής, με έμφαση στη μεθοδολογία, στα μαθηματικά εργαλεία και στη λύση προβλημάτων.</p>
+<ul class="clean">
+<li>Κλασική Μηχανική, Ηλεκτρομαγνητισμός, Ταλαντώσεις/Κύματα, ανάλογα με την ύλη του τμήματος.</li>
+<li>Προετοιμασία για εργασίες, πρόοδους ή εξεταστική, χωρίς παπαγαλία λύσεων.</li>
+<li>Εξήγηση θεωρίας, τύπων και βημάτων επίλυσης σε πανεπιστημιακό επίπεδο.</li>
+</ul>
+<a class="btn js-sfx" data-class="Φοιτητής/Φοιτήτρια" href="#contact">Ενδιαφέρομαι ως φοιτητής</a>
+</article>
+</div>
+</div>
+</section>
+<section class="section" id="method">
+<div class="wrap">
+<div class="tagline">Μεθοδολογία μαθήματος</div>
+<h2>Κάθε μάθημα έχει συγκεκριμένο στόχο, όχι απλή επίλυση ασκήσεων.</h2>
+<p class="lead">Η διδασκαλία οργανώνεται έτσι ώστε ο μαθητής να μεταβαίνει από την κατανόηση στην ανεξάρτητη λύση. Κάθε λάθος καταγράφεται ως ένδειξη για το επόμενο βήμα.</p>
+<div class="steps" style="margin-top:20px">
+<div class="step"><b>Διάγνωση</b><span>Ελέγχουμε προαπαιτούμενα, κενά, τρόπο σκέψης και συνήθη λάθη.</span></div>
+<div class="step"><b>Έννοια</b><span>Η θεωρία συνδέεται με εικόνα, διάγραμμα, μοντέλο ή προσομοίωση.</span></div>
+<div class="step"><b>Μέθοδος</b><span>Χτίζουμε βήματα λύσης: δεδομένα, σχήμα, σχέσεις, αντικατάσταση, έλεγχος.</span></div>
+<div class="step"><b>Κλιμάκωση</b><span>Από απλές σχολικές ασκήσεις σε θέματα Τράπεζας και συνδυαστικά ερωτήματα.</span></div>
+<div class="step"><b>Αυτονομία</b><span>Ο μαθητής εξηγεί τη λύση, διορθώνει λάθη και γράφει με εξεταστική σαφήνεια.</span></div>
+</div>
+</div>
+</section>
+<section class="section" id="apps">
+<div class="wrap">
+<div class="wideTitle">
+<div>
+<div class="tagline">Προσομοιώσεις &amp; εργαλεία</div>
+<h2>Όπου η έννοια δυσκολεύει, γίνεται ορατή.</h2>
+</div>
+<p class="lead">Χρησιμοποιούνται διαδραστικές προσομοιώσεις και μικρές εφαρμογές όταν βοηθούν πραγματικά: κίνηση, δυνάμεις, ενέργεια, ηλεκτρικά κυκλώματα, πεδία, ταλαντώσεις, κύματα και σύγχρονη Φυσική.</p>
+</div>
+<div class="appLab">
+<div class="simPanel">
+<h3>Mini demo: ευθύγραμμη ομαλά επιταχυνόμενη κίνηση</h3>
+<p style="color:var(--muted)">Αλλάζεις αρχική ταχύτητα και επιτάχυνση για να δεις πώς μεταβάλλονται θέση και ταχύτητα. Παράδειγμα του τρόπου με τον οποίο οι ασκήσεις συνδέονται με γραφική αναπαράσταση.</p>
+<canvas aria-label="Προσομοίωση κίνησης" height="360" id="motionCanvas" width="900"></canvas>
+<div class="controls">
+<div class="sliderLabel">Αρχική ταχύτητα υ₀: <span id="v0Text">8 m/s</span><input id="v0" max="24" min="0" type="range" value="8"/></div>
+<div class="sliderLabel">Επιτάχυνση α: <span id="aText">2 m/s²</span><input id="acc" max="6" min="-4" step="0.5" type="range" value="2"/></div>
+</div>
+<div class="formula" id="motionFormula">x = υ₀t + 1/2 αt²</div>
+</div>
+<div class="card">
+<h3>Ενδεικτικές εφαρμογές στο μάθημα</h3>
+<div class="appList" style="margin-top:12px">
+<div class="appItem"><div class="appIcon">📈</div><div><b>Διαγράμματα κίνησης</b><small>x–t, υ–t, α–t με ερμηνεία κλίσης και εμβαδού.</small></div></div>
+<div class="appItem"><div class="appIcon">🧲</div><div><b>Πεδία και δυνάμεις</b><small>Ηλεκτρικό/μαγνητικό πεδίο, διανύσματα και ποιοτική πρόβλεψη κίνησης.</small></div></div>
+<div class="appItem"><div class="appIcon">⚡</div><div><b>iCircuit</b><small>Κυκλώματα, ρεύμα, τάση, αντίσταση, πηνίο, μετασχηματιστής και ηλεκτρομαγνητικά φαινόμενα.</small></div></div>
+<div class="appItem"><div class="appIcon">〰️</div><div><b>Ταλαντώσεις και κύματα</b><small>Οπτικοποίηση περιόδου, συχνότητας, φάσης, πλάτους και διάδοσης.</small></div></div>
+<div class="appItem"><div class="appIcon">🧪</div><div><b>Εργαλεία ελέγχου</b><small>Μικροί υπολογιστές, πίνακες, τυπολόγια και φύλλα εξάσκησης.</small></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="teacher">
+<div class="wrap">
+<div class="trustGrid">
+<div class="card">
+<div class="tagline">Ποιος διδάσκει</div>
+<h2>Καθηγητής Φυσικής με πανεπιστημιακή βάση και εμπειρία στη διδασκαλία.</h2>
+<p>Το μάθημα σχεδιάζεται από φυσικό με BSc στη Φυσική και MSc στην Ηλεκτρονική Αυτοματοποίηση, με πολυετή εμπειρία σε σχολική τάξη και ιδιαίτερα μαθήματα Φυσικής. Η έμφαση δεν είναι στην παπαγαλία τύπων, αλλά στο να καταλαβαίνει ο μαθητής τι μοντελοποιεί κάθε άσκηση.</p>
+</div>
+<div class="card">
+<div class="tagline">Τι καλύπτει η σελίδα</div>
+<h3>Η σελίδα απαντά στις βασικές ανάγκες του μαθητή.</h3>
+<ul class="clean"><li>Ιδιαίτερα Φυσικής για μαθητές Γυμνασίου.</li><li>Ιδιαίτερα Φυσικής για μαθητές Λυκείου.</li><li>Προετοιμασία Φυσικής Γ΄ Λυκείου για Πανελλήνιες.</li><li>Υποστήριξη φοιτητών σε βασικά μαθήματα Φυσικής.</li></ul>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="finder">
+<div class="wrap">
+<div class="tagline">Γρήγορος οδηγός επιλογής</div>
+<h2>Δες ποια διαδρομή ταιριάζει στον μαθητή.</h2>
+<div class="finder" style="margin-top:18px">
+<div class="card">
+<div class="field"><label for="grade">Επίπεδο / τάξη</label><select id="grade"><option>Γυμνάσιο</option><option>Α΄ Λυκείου</option><option>Β΄ Λυκείου</option><option>Γ΄ Λυκείου</option><option>Φοιτητής/Φοιτήτρια</option></select></div>
+<div class="field"><label for="goal">Κύριος στόχος</label><select id="goal"><option>Κάλυψη κενών</option><option>Σχολικό και βαθμός τετραμήνου</option><option>Τράπεζα Θεμάτων</option><option>Πανελλήνιες</option></select></div>
+<button class="btn primary js-sfx" id="makePlan" type="button">Πρότεινε διαδρομή</button>
+</div>
+<div class="resultBox" id="planResult">
+<h3>Προτεινόμενη διαδρομή</h3>
+<p style="color:var(--muted)">Επίλεξε τάξη και στόχο για να εμφανιστεί ένα ενδεικτικό πλάνο.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="faq">
+<div class="wrap">
+<div class="tagline">Συχνές ερωτήσεις</div>
+<h2>Τι περιλαμβάνει η προετοιμασία;</h2>
+<div class="faq" style="margin-top:16px">
+<details><summary>Το μάθημα ακολουθεί το σχολικό βιβλίο;</summary><p>Ναι. Η βάση είναι το σχολικό βιβλίο, οι οδηγίες διδασκαλίας και η εξεταστέα ύλη. Οι προσομοιώσεις και οι εφαρμογές λειτουργούν υποστηρικτικά, όχι ως αντικατάσταση της ύλης.</p></details>
+<details><summary>Πώς δουλεύεται η Τράπεζα Θεμάτων;</summary><p>Τα θέματα ταξινομούνται ανά έννοια, τύπο ερωτήματος και δυσκολία. Ο μαθητής λύνει πρώτα με καθοδήγηση, μετά με μερική βοήθεια και τελικά αυτόνομα.</p></details>
+<details><summary>Στη Γ΄ Λυκείου λύνονται όλα τα παλιά θέματα;</summary><p>Το πρόγραμμα περιλαμβάνει τα διαθέσιμα θέματα Πανελληνίων από το 2002 έως σήμερα, οργανωμένα ανά κεφάλαιο και εξεταστικό μοτίβο. Δεν γίνεται απλή αποστήθιση λύσεων, αλλά εκμάθηση στρατηγικής.</p></details>
+<details><summary>Πόσο νωρίς πρέπει να ξεκινήσει η προετοιμασία στη Φυσική;</summary><p>Για Α΄ και Β΄ Λυκείου βοηθάει η σταθερή παρακολούθηση μέσα στη χρονιά, ειδικά πριν από διαγωνίσματα και εξετάσεις. Για Γ΄ Λυκείου, όσο νωρίτερα οργανωθεί η ύλη, τόσο καλύτερα ελέγχονται τα κενά και ο χρόνος επανάληψης.</p></details>
+<details><summary>Γίνονται μαθήματα Φυσικής Γυμνασίου;</summary><p>Ναι. Υπάρχει υποστήριξη για μαθητές Γυμνασίου, ειδικά για κατανόηση βασικών εννοιών, κάλυψη κενών και σωστή προετοιμασία πριν το Λύκειο.</p></details>
+<details><summary>Αναλαμβάνεις και φοιτητές;</summary><p>Ναι, για βασικά πανεπιστημιακά μαθήματα Φυσικής, ανάλογα με την ύλη του τμήματος και το επίπεδο δυσκολίας. Πριν ξεκινήσει το μάθημα χρειάζεται να σταλεί η ύλη ή ενδεικτικά θέματα.</p></details>
+<details><summary>Το μάθημα είναι κατάλληλο για μαθητή που έχει πολλά κενά;</summary><p>Ναι, αρκεί να γίνει πρώτα διάγνωση. Σε αυτή την περίπτωση το πρόγραμμα ξεκινά από τα προαπαιτούμενα και ανεβαίνει σταδιακά σε σχολικές ασκήσεις, Τράπεζα Θεμάτων και απαιτητικότερα θέματα.</p></details>
+</div>
+</div>
+</section>
+<section class="section" id="sources">
+<div class="wrap">
+<div class="card">
+<div class="tagline">Σύνδεση με επίσημη ύλη</div>
+<h2>Η προετοιμασία παρακολουθεί την τρέχουσα σχολική και εξεταστική πραγματικότητα.</h2>
+<p>Για τον τελικό προγραμματισμό λαμβάνονται υπόψη οι ανακοινώσεις/οδηγίες του ΙΕΠ, η Τράπεζα Θεμάτων Διαβαθμισμένης Δυσκολίας και το αρχείο θεμάτων Πανελλαδικών του ΥΠΑΙΘΑ. Τα ακριβή κεφάλαια και η σειρά διδασκαλίας προσαρμόζονται κάθε σχολική χρονιά.</p>
+<div class="heroActions" style="margin-bottom:0">
+<a class="btn ghost js-sfx" href="https://www.iep.edu.gr/yli-kai-odigies-didaskalias-mathimaton-genikou-lykeiou-gia-to-scholiko-etos-2025-2026/" rel="noopener" target="_blank">Ύλη &amp; οδηγίες ΓΕΛ</a>
+<a class="btn ghost js-sfx" href="https://trapeza.iep.edu.gr/" rel="noopener" target="_blank">Τράπεζα Θεμάτων</a>
+<a class="btn ghost js-sfx" href="https://apps1.minedu.gov.gr/themata/" rel="noopener" target="_blank">Θέματα Πανελληνίων</a>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="contact">
+<div class="wrap"><div class="contactGrid"><div><div class="tagline">Επικοινωνία</div><h2>Μίλησέ μου για το μάθημα που χρειάζεσαι.</h2><p class="lead">Στείλε email ή κάλεσε για μια πρώτη συνεννόηση. Πες μου τάξη/επίπεδο, στόχο, δυσκολίες και διαθέσιμες ημέρες.</p><div class="notice"><b>Στατική έκδοση:</b> Δεν υπάρχει ακόμη backend φόρμα. Ο επισκέπτης επικοινωνεί απευθείας με email ή τηλέφωνο, χωρίς κόστος server.</div></div><div class="card"><h3>Άμεση επικοινωνία</h3><p>Για καλύτερη εκτίμηση, στείλε τάξη, ύλη, στόχο και τι δυσκολεύει περισσότερο τον μαθητή ή τον φοιτητή.</p><div class="heroActions"><a class="btn primary js-sfx" href="mailto:panoskatsoulis@live.com?subject=%CE%99%CE%B4%CE%B9%CE%B1%CE%AF%CF%84%CE%B5%CF%81%CE%B1%20%CE%9C%CE%B1%CE%B8%CE%AE%CE%BC%CE%B1%CF%84%CE%B1%20%CE%A6%CF%85%CF%83%CE%B9%CE%BA%CE%AE%CF%82">Στείλε email</a><a class="btn ghost js-sfx" href="tel:+306981468377">Κάλεσε στο τηλέφωνο</a></div><ul class="clean"><li>Email: panoskatsoulis@live.com</li><li>Τηλέφωνο: 6981468377</li><li>Αρχική συνεννόηση για επίπεδο, στόχο και διαθέσιμες ώρες.</li></ul></div></div></div>
+</section>
+</main>
+<footer>
+<div class="wrap foot">
+<div><b>Ιδιαίτερα Μαθήματα Φυσικής</b><br/><span>Φυσική για Γυμνάσιο, Λύκειο και φοιτητές με μεθοδική και διαδραστική διδασκαλία.</span></div>
+<div>© 2026 Ιδιαίτερα Μαθήματα Φυσικής • <a class="js-sfx" href="#top">Πίσω στην κορυφή</a></div>
+</div>
+</footer>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<audio id="sfxClick" preload="auto" src="assets/WebSiteClick.mp3"></audio>
+<audio id="sfxForm" preload="auto" src="assets/FormCompletion.mp3"></audio>
+<audio id="sfxTick" preload="auto" src="assets/tick.m4a"></audio>
+<script>
+  const $ = (s, r=document) => r.querySelector(s);
+  const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+
+  function play(id, volume=.55){
+    const el = id === 'form' ? $('#sfxForm') : id === 'tick' ? $('#sfxTick') : $('#sfxClick');
+    if(!el) return;
+    try{ el.pause(); el.currentTime = 0; el.volume = volume; el.play().catch(()=>{}); }catch(_){ }
+  }
+
+  $$('.js-sfx, .btn').forEach(el => el.addEventListener('click', () => play('click', .45), {passive:true}));
+  $$('select,input[type="range"]').forEach(el => el.addEventListener('change', () => play('tick', .45), {passive:true}));
+
+  $('#makePlan')?.addEventListener('click', () => {
+    const grade = $('#grade').value;
+    const goal = $('#goal').value;
+    let bullets = [];
+
+    if(grade === 'Φοιτητής/Φοιτήτρια'){
+      bullets = [
+        'Έλεγχος ύλης του μαθήματος και απαιτήσεων του τμήματος.',
+        'Σύνδεση θεωρίας με λυμένα παραδείγματα και μαθηματικά εργαλεία.',
+        'Επίλυση αντιπροσωπευτικών προβλημάτων εξεταστικής.',
+        'Στοχευμένη προετοιμασία σε κεφάλαια που δυσκολεύουν περισσότερο.'
+      ];
+    }else if(grade === 'Γυμνάσιο'){
+      bullets = [
+        'Επανεκκίνηση από τις βασικές έννοιες της Φυσικής.',
+        'Πολλά μικρά παραδείγματα με μονάδες και απλά σχήματα.',
+        'Σχολικές ασκήσεις και προετοιμασία για τεστ/διαγωνίσματα.',
+        'Κάλυψη κενών πριν το Λύκειο.'
+      ];
+    }else if(grade === 'Γ΄ Λυκείου'){
+      bullets = [
+        'Διαγνωστικό τεστ σε βασικές έννοιες και μαθηματικά εργαλεία.',
+        'Χαρτογράφηση ύλης ανά κεφάλαιο και ανά τύπο θέματος.',
+        'Συστηματική λύση θεμάτων Πανελληνίων 2002–σήμερα.',
+        'Εβδομαδιαία προσομοίωση χρόνου και διόρθωση με κριτήρια βαθμολόγησης.'
+      ];
+    }else if(goal === 'Τράπεζα Θεμάτων'){
+      bullets = [
+        'Σύντομη επανάληψη θεωρίας και τύπων.',
+        'Θέματα Τράπεζας ταξινομημένα από απλά σε απαιτητικά.',
+        'Καταγραφή επαναλαμβανόμενων λαθών.',
+        'Μικρό τεστ κάθε 2–3 μαθήματα για έλεγχο προόδου.'
+      ];
+    }else if(goal === 'Κάλυψη κενών'){
+      bullets = [
+        'Έλεγχος προαπαιτούμενων από προηγούμενες τάξεις.',
+        'Επανεκκίνηση από βασικές έννοιες με παραδείγματα.',
+        'Λίγες αλλά στοχευμένες ασκήσεις ανά μάθημα.',
+        'Σταδιακή μετάβαση στο επίπεδο του σχολικού.'
+      ];
+    }else{
+      bullets = [
+        'Παρακολούθηση σχολικού ρυθμού.',
+        'Εκμάθηση ασκήσεων σχολικού πριν από τα διαγωνίσματα.',
+        'Σύνδεση θεωρίας με διαγράμματα και προσομοιώσεις.',
+        'Επαναληπτικά φύλλα για τετράμηνο και εξετάσεις.'
+      ];
+    }
+
+    $('#planResult').innerHTML = `<h3>${grade} — ${goal}</h3><ul class="clean">${bullets.map(b=>`<li>${b}</li>`).join('')}</ul><div class="heroActions"><a class="btn primary js-sfx" href="#contact">Επικοινωνία</a></div>`;
+    play('form', .45);
+  });
+
+  const canvas = $('#motionCanvas');
+  const ctx = canvas?.getContext('2d');
+  const v0 = $('#v0'), acc = $('#acc'), v0Text = $('#v0Text'), aText = $('#aText'), formula = $('#motionFormula');
+  let t0 = performance.now();
+
+  function drawMotion(now){
+    if(!ctx) return;
+    const W = canvas.width, H = canvas.height;
+    const v = Number(v0.value), a = Number(acc.value);
+    if(v0Text) v0Text.textContent = `${v} m/s`;
+    if(aText) aText.textContent = `${a} m/s²`;
+    const t = ((now - t0)/1000) % 6;
+    const x = v*t + 0.5*a*t*t;
+    const maxX = Math.max(30, 24*6 + .5*6*6*6);
+    const px = 60 + (Math.max(0, Math.min(maxX, x)) / maxX) * (W - 120);
+    ctx.clearRect(0,0,W,H);
+    const grad = ctx.createLinearGradient(0,0,W,H);
+    grad.addColorStop(0,'rgba(255,255,255,.03)');
+    grad.addColorStop(1,'rgba(255,126,121,.03)');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0,0,W,H);
+    ctx.strokeStyle = 'rgba(255,255,255,.16)';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(60,250);
+    ctx.lineTo(W-60,250);
+    ctx.stroke();
+
+    for(let i=0;i<=10;i++){
+      const gx = 60 + i*(W-120)/10;
+      ctx.strokeStyle='rgba(255,255,255,.10)';
+      ctx.beginPath();
+      ctx.moveTo(gx,80);
+      ctx.lineTo(gx,270);
+      ctx.stroke();
+      ctx.fillStyle='rgba(255,255,255,.48)';
+      ctx.font='15px system-ui';
+      ctx.fillText(String(i*10), gx-7, 294);
+    }
+
+    ctx.strokeStyle='rgba(255,126,121,.9)';
+    ctx.lineWidth=5;
+    ctx.lineCap='round';
+    ctx.beginPath();
+    ctx.moveTo(60,250);
+    ctx.lineTo(px,250);
+    ctx.stroke();
+    ctx.fillStyle='rgba(255,126,121,.95)';
+    ctx.beginPath();
+    ctx.arc(px,250,18,0,Math.PI*2);
+    ctx.fill();
+    ctx.fillStyle='rgba(255,255,255,.95)';
+    ctx.font='800 18px system-ui';
+    ctx.fillText('m',px-6,256);
+    ctx.fillStyle='rgba(255,255,255,.88)';
+    ctx.font='900 24px system-ui';
+    ctx.fillText('Κίνηση σώματος σε ευθεία',42,44);
+    ctx.fillStyle='rgba(255,255,255,.66)';
+    ctx.font='700 16px system-ui';
+    ctx.fillText(`t = ${t.toFixed(1)} s x ≈ ${x.toFixed(1)} m υ = ${(v + a*t).toFixed(1)} m/s`,42,72);
+
+    const chartX = W-280, chartY = 92, chartW=220, chartH=110;
+    ctx.strokeStyle='rgba(255,255,255,.17)';
+    ctx.lineWidth=2;
+    ctx.strokeRect(chartX, chartY, chartW, chartH);
+    ctx.strokeStyle='rgba(122,215,255,.9)';
+    ctx.lineWidth=3;
+    ctx.beginPath();
+    for(let i=0;i<=60;i++){
+      const tt = i/10;
+      const vv = v + a*tt;
+      const yy = chartY + chartH - Math.max(0, Math.min(36, vv + 10))/46*chartH;
+      const xx = chartX + i/60*chartW;
+      if(i===0) ctx.moveTo(xx,yy); else ctx.lineTo(xx,yy);
+    }
+    ctx.stroke();
+    ctx.fillStyle='rgba(255,255,255,.66)';
+    ctx.font='700 13px system-ui';
+    ctx.fillText('γράφημα υ–t', chartX+10, chartY+22);
+    if(formula) formula.textContent = `x = ${v}·t + 1/2·(${a})·t² | υ = ${v} + (${a})·t`;
+    requestAnimationFrame(drawMotion);
+  }
+
+  if(ctx) requestAnimationFrame(drawMotion);
+</script>
+</body>
+</html>
