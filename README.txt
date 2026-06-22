@@ -9,7 +9,7 @@ Deploy στο Render:
 3. Publish Directory: .
 
 Production domain:
-https://www.idiaitera-fysikis.gr
+https://www.idiaitera-fysikis.com
 
 Το canonical URL, το robots.txt και το sitemap.xml χρησιμοποιούν το production domain.
 Η επικοινωνία παραμένει στατική μέσω email και τηλεφώνου.

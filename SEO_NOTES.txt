@@ -1,7 +1,7 @@
 SEO σημειώσεις
 
 Production domain:
-https://www.idiaitera-fysikis.gr
+https://www.idiaitera-fysikis.com
 
 Η σελίδα περιλαμβάνει:
 1. canonical URL στο <head>
