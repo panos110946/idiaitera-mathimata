@@ -4,18 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ιδιαίτερα Μαθήματα Φυσικής | Γυμνάσιο, Λύκειο, Πανελλήνιες</title>
-  <meta name="description" content="Ιδιαίτερα μαθήματα Φυσικής για Γυμνάσιο, Λύκειο, Πανελλήνιες και φοιτητές. Μεθοδική διδασκαλία, κάλυψη κενών, Τράπεζα Θεμάτων και διαδραστικά εργαλεία." />
+  <meta name="description" content="Ιδιαίτερα μαθήματα Φυσικής για μαθητές Γυμνασίου, Λυκείου, Γ΄ Λυκείου και φοιτητές. Σαφής εξήγηση, μεθοδική προετοιμασία και υποστήριξη στις Πανελλήνιες." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="Παναγιώτης Κατσούλης" />
   <meta name="theme-color" content="#123B4A" />
+  <link rel="canonical" href="https://www.idiaitera-fysikis.gr/" />
   <meta property="og:locale" content="el_GR" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ιδιαίτερα Μαθήματα Φυσικής" />
-  <meta property="og:title" content="Ιδιαίτερα Μαθήματα Φυσικής" />
-  <meta property="og:description" content="Φυσική για Γυμνάσιο, Λύκειο, Πανελλήνιες και φοιτητές με καθαρή μεθοδολογία και στοχευμένη εξάσκηση." />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ιδιαίτερα Μαθήματα Φυσικής" />
-  <meta name="twitter:description" content="Μεθοδικά ιδιαίτερα μαθήματα Φυσικής για μαθητές και φοιτητές." />
+  <meta property="og:title" content="Ιδιαίτερα Μαθήματα Φυσικής | Γυμνάσιο, Λύκειο, Πανελλήνιες" />
+  <meta property="og:description" content="Ιδιαίτερα μαθήματα Φυσικής για μαθητές Γυμνασίου, Λυκείου, Γ΄ Λυκείου και φοιτητές. Σαφής εξήγηση και μεθοδική προετοιμασία." />
+  <meta property="og:url" content="https://www.idiaitera-fysikis.gr/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Ιδιαίτερα Μαθήματα Φυσικής | Γυμνάσιο, Λύκειο, Πανελλήνιες" />
+  <meta name="twitter:description" content="Ιδιαίτερα μαθήματα Φυσικής για μαθητές και φοιτητές, με σαφή εξήγηση και μεθοδική προετοιμασία." />
   <link rel="icon" href="assets/logo-idiaitera-fysikis.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="assets/logo-idiaitera-fysikis.svg" />
   <style>
@@ -560,6 +562,19 @@
     }
     .foot a { color: var(--deep); font-weight: 760; text-decoration: none; }
 
+    :where(a, button, input, select, summary):focus-visible {
+      outline: 3px solid var(--accent-2);
+      outline-offset: 3px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+
     @media (max-width: 980px) {
       .nav-links { display: none; }
       .hero-grid, .section-head, .method-grid, .lab, .profile, .finder, .source-strip, .contact-grid { grid-template-columns: 1fr; }
@@ -607,40 +622,63 @@
     "@graph": [
       {
         "@type": "WebSite",
+        "@id": "https://www.idiaitera-fysikis.gr/#website",
+        "url": "https://www.idiaitera-fysikis.gr/",
         "name": "Ιδιαίτερα Μαθήματα Φυσικής",
         "inLanguage": "el-GR"
       },
       {
         "@type": "WebPage",
-        "name": "Ιδιαίτερα Μαθήματα Φυσικής",
-        "description": "Ιδιαίτερα μαθήματα Φυσικής για Γυμνάσιο, Λύκειο, Πανελλήνιες και φοιτητές.",
-        "inLanguage": "el-GR"
+        "@id": "https://www.idiaitera-fysikis.gr/#webpage",
+        "url": "https://www.idiaitera-fysikis.gr/",
+        "name": "Ιδιαίτερα Μαθήματα Φυσικής | Γυμνάσιο, Λύκειο, Πανελλήνιες",
+        "description": "Ιδιαίτερα μαθήματα Φυσικής για μαθητές Γυμνασίου, Λυκείου, Γ΄ Λυκείου και φοιτητές. Σαφής εξήγηση, μεθοδική προετοιμασία και υποστήριξη στις Πανελλήνιες.",
+        "inLanguage": "el-GR",
+        "isPartOf": { "@id": "https://www.idiaitera-fysikis.gr/#website" },
+        "about": { "@id": "https://www.idiaitera-fysikis.gr/#organization" }
       },
       {
-        "@type": ["EducationalOrganization", "ProfessionalService"],
+        "@type": "EducationalOrganization",
+        "@id": "https://www.idiaitera-fysikis.gr/#organization",
+        "url": "https://www.idiaitera-fysikis.gr/",
         "name": "Ιδιαίτερα Μαθήματα Φυσικής",
         "description": "Ιδιαίτερα μαθήματα Φυσικής για μαθητές Γυμνασίου, Λυκείου και φοιτητές με μεθοδική διδασκαλία.",
-        "availableLanguage": ["el", "en"],
+        "logo": "https://www.idiaitera-fysikis.gr/assets/logo-idiaitera-fysikis.svg",
         "areaServed": "Ελλάδα",
-        "serviceType": [
-          "Ιδιαίτερα μαθήματα Φυσικής Γυμνασίου",
-          "Ιδιαίτερα μαθήματα Φυσικής Λυκείου",
-          "Προετοιμασία Φυσικής Πανελληνίων",
-          "Υποστήριξη φοιτητών σε μαθήματα Φυσικής"
-        ],
-        "makesOffer": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ιδιαίτερα Φυσικής Γυμνασίου" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ιδιαίτερα Φυσικής Λυκείου" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Προετοιμασία Φυσικής Πανελληνίων" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Υποστήριξη φοιτητών στη Φυσική" } }
+        "employee": { "@id": "https://www.idiaitera-fysikis.gr/#teacher" }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.idiaitera-fysikis.gr/#physics-lessons",
+        "url": "https://www.idiaitera-fysikis.gr/#levels",
+        "name": "Ιδιαίτερα μαθήματα Φυσικής",
+        "serviceType": "Ιδιαίτερα μαθήματα και εκπαιδευτική υποστήριξη στη Φυσική",
+        "description": "Μεθοδική υποστήριξη στη Φυσική για Γυμνάσιο, Λύκειο, προετοιμασία Πανελληνίων και βασικά πανεπιστημιακά μαθήματα.",
+        "provider": { "@id": "https://www.idiaitera-fysikis.gr/#organization" },
+        "availableChannel": {
+          "@type": "ServiceChannel",
+          "availableLanguage": {
+            "@type": "Language",
+            "name": "Ελληνικά",
+            "alternateName": "el"
+          }
+        },
+        "audience": [
+          { "@type": "EducationalAudience", "educationalRole": "Μαθητές Γυμνασίου" },
+          { "@type": "EducationalAudience", "educationalRole": "Μαθητές Λυκείου" },
+          { "@type": "EducationalAudience", "educationalRole": "Υποψήφιοι Πανελληνίων" },
+          { "@type": "EducationalAudience", "educationalRole": "Φοιτητές" }
         ]
       },
       {
         "@type": "Person",
+        "@id": "https://www.idiaitera-fysikis.gr/#teacher",
+        "url": "https://www.idiaitera-fysikis.gr/#teacher",
         "name": "Παναγιώτης Κατσούλης",
         "jobTitle": "Καθηγητής Φυσικής",
         "email": "mailto:panoskatsoulis@live.com",
         "telephone": "+306981468377",
+        "worksFor": { "@id": "https://www.idiaitera-fysikis.gr/#organization" },
         "knowsAbout": [
           "Φυσική Γυμνασίου",
           "Φυσική Λυκείου",
@@ -651,13 +689,14 @@
       },
       {
         "@type": "FAQPage",
+        "@id": "https://www.idiaitera-fysikis.gr/#faq-schema",
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Γίνονται ιδιαίτερα μαθήματα Φυσικής Γυμνασίου;",
+            "name": "Το μάθημα ακολουθεί το σχολικό βιβλίο;",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ναι. Υπάρχει υποστήριξη για μαθητές Γυμνασίου, με έμφαση στην κατανόηση βασικών εννοιών και στην κάλυψη κενών πριν το Λύκειο."
+              "text": "Ναι. Η βάση είναι το σχολικό βιβλίο, οι οδηγίες διδασκαλίας και η εξεταστέα ύλη. Οι προσομοιώσεις λειτουργούν υποστηρικτικά."
             }
           },
           {
@@ -665,15 +704,39 @@
             "name": "Πώς δουλεύεται η Τράπεζα Θεμάτων;",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Τα θέματα ταξινομούνται ανά έννοια, τύπο ερωτήματος και δυσκολία, ώστε ο μαθητής να αποκτήσει μέθοδο και αυτονομία."
+              "text": "Τα θέματα ταξινομούνται ανά έννοια, τύπο ερωτήματος και δυσκολία. Ο μαθητής λύνει πρώτα με καθοδήγηση και σταδιακά αυτόνομα."
             }
           },
           {
             "@type": "Question",
-            "name": "Αναλαμβάνονται φοιτητές;",
+            "name": "Στη Γ΄ Λυκείου λύνονται όλα τα παλιά θέματα;",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Το πρόγραμμα περιλαμβάνει τα διαθέσιμα θέματα Πανελληνίων από το 2002 έως σήμερα, οργανωμένα ανά κεφάλαιο και εξεταστικό μοτίβο."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Γίνονται μαθήματα Φυσικής Γυμνασίου;",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ναι. Υπάρχει υποστήριξη για βασικές έννοιες, κάλυψη κενών και σωστή προετοιμασία πριν από το Λύκειο."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Αναλαμβάνονται και φοιτητές;",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Ναι, για βασικά πανεπιστημιακά μαθήματα Φυσικής, ανάλογα με την ύλη του τμήματος και το επίπεδο δυσκολίας."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Το μάθημα είναι κατάλληλο για μαθητή που έχει πολλά κενά;",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ναι, αφού προηγηθεί διάγνωση. Σε αυτή την περίπτωση το πρόγραμμα ξεκινά από τα προαπαιτούμενα και ανεβαίνει σταδιακά."
             }
           }
         ]
@@ -705,7 +768,7 @@
       <div class="wrap hero-grid">
         <div>
           <div class="eyebrow">Φυσική με μέθοδο</div>
-          <h1>Ιδιαίτερα Μαθήματα Φυσικής για μαθητές και φοιτητές.</h1>
+          <h1>Ιδιαίτερα Μαθήματα Φυσικής</h1>
           <p class="lead">Στοχευμένη υποστήριξη στη Φυσική για Γυμνάσιο, Α΄, Β΄ και Γ΄ Λυκείου, Πανελλήνιες και βασικά πανεπιστημιακά μαθήματα. Η διδασκαλία οργανώνει την ύλη, κλείνει κενά και μετατρέπει την άσκηση σε καθαρή διαδικασία σκέψης.</p>
           <div class="hero-actions">
             <a class="btn primary" href="#contact">Ζήτησε ενημέρωση</a>
@@ -741,7 +804,7 @@
         <div class="section-head">
           <div>
             <div class="label">Πρόγραμμα ανά επίπεδο</div>
-            <h2>Από τις βάσεις του Γυμνασίου μέχρι την εξεταστική στρατηγική.</h2>
+            <h2>Μαθήματα Φυσικής για Γυμνάσιο και Λύκειο</h2>
           </div>
           <p>Κάθε πρόγραμμα προσαρμόζεται στο επίπεδο του μαθητή και δουλεύει με σαφή κλιμάκωση: έννοια, μέθοδος, ασκήσεις, έλεγχος λαθών και επανάληψη.</p>
         </div>
@@ -770,7 +833,7 @@
           </article>
           <article class="card class-card">
             <span class="mark">Γ</span>
-            <h3>Γ΄ Λυκείου και Πανελλήνιες</h3>
+            <h3>Προετοιμασία Φυσικής Γ΄ Λυκείου και Πανελλήνιες</h3>
             <p>Οργανωμένη προετοιμασία με πλήρη χαρτογράφηση μοτίβων και συνδυαστικών ασκήσεων.</p>
             <ul class="clean">
               <li>Ύλη Προσανατολισμού με εννοιολογική βάση.</li>
@@ -794,7 +857,7 @@
           </article>
           <article class="card class-card">
             <span class="mark">UNI</span>
-            <h3>Φοιτητές</h3>
+            <h3>Υποστήριξη φοιτητών στη Φυσική</h3>
             <p>Υποστήριξη σε εισαγωγικά ή βασικά πανεπιστημιακά μαθήματα Φυσικής, ανάλογα με την ύλη του τμήματος.</p>
             <ul class="clean">
               <li>Κλασική Μηχανική, Ηλεκτρομαγνητισμός, Ταλαντώσεις και Κύματα.</li>
@@ -811,7 +874,7 @@
       <div class="wrap method-grid">
         <div class="card method-note">
           <div class="label">Μεθοδολογία</div>
-          <h2>Κάθε μάθημα έχει συγκεκριμένο στόχο.</h2>
+          <h2>Τρόπος διδασκαλίας με συγκεκριμένο στόχο</h2>
           <p>Η διδασκαλία δεν μένει στην αντιγραφή λύσεων. Ο μαθητής μαθαίνει να αναγνωρίζει τα δεδομένα, να επιλέγει μοντέλο, να ελέγχει μονάδες και να εξηγεί γιατί βγαίνει το αποτέλεσμα.</p>
         </div>
         <div class="steps">
@@ -964,7 +1027,7 @@
       <div class="wrap contact-grid">
         <div>
           <div class="label">Επικοινωνία</div>
-          <h2>Μίλησέ μου για το μάθημα που χρειάζεσαι.</h2>
+          <h2>Επικοινωνία για ιδιαίτερα μαθήματα Φυσικής</h2>
           <p>Στείλε τάξη ή επίπεδο, στόχο, δυσκολίες και διαθέσιμες ημέρες για μια πρώτη συνεννόηση.</p>
           <div class="note">Η σελίδα είναι στατική, χωρίς backend φόρμα. Η επικοινωνία γίνεται απευθείας με email ή τηλέφωνο.</div>
         </div>
@@ -1136,10 +1199,14 @@
       ctx.font = "700 13px system-ui";
       ctx.fillText("γράφημα υ-t", chartX + 10, chartY + 22);
 
-      requestAnimationFrame(drawMotion);
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        requestAnimationFrame(drawMotion);
+      }
     }
 
-    if (ctx) requestAnimationFrame(drawMotion);
+    if (ctx) {
+      requestAnimationFrame(drawMotion);
+    }
   </script>
 </body>
 </html>

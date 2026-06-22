@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Όταν βάλεις τελικό domain, πρόσθεσε εδώ:
-# Sitemap: https://TO-DOMAIN-SOU/sitemap.xml
+Sitemap: https://www.idiaitera-fysikis.gr/sitemap.xml

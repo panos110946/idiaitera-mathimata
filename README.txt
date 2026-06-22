@@ -8,7 +8,8 @@ Deploy στο Render:
 2. Build Command: άδειο
 3. Publish Directory: .
 
-Όταν αργότερα συνδέσεις κανονικό domain, τότε θα προστεθούν:
-- canonical URL
-- sitemap.xml με το τελικό domain
-- πιθανό backend contact form, αν το θέλεις
+Production domain:
+https://www.idiaitera-fysikis.gr
+
+Το canonical URL, το robots.txt και το sitemap.xml χρησιμοποιούν το production domain.
+Η επικοινωνία παραμένει στατική μέσω email και τηλεφώνου.

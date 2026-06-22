@@ -1,10 +1,13 @@
 SEO σημειώσεις
 
-Η σελίδα δεν έχει προσωρινά canonical URL, επειδή δεν έχει ακόμη τελικό domain.
-Όταν συνδεθεί το τελικό domain, πρέπει να προστεθούν:
+Production domain:
+https://www.idiaitera-fysikis.gr
+
+Η σελίδα περιλαμβάνει:
 1. canonical URL στο <head>
-2. sitemap.xml με το τελικό URL
-3. πιθανό og:url για social sharing
+2. sitemap.xml με το production URL
+3. og:url για social sharing
+4. JSON-LD για τον εκπαιδευτικό οργανισμό, την υπηρεσία, τον καθηγητή και τις συχνές ερωτήσεις
 
 Η σελίδα δεν κάνει γεωγραφική στόχευση. Το περιεχόμενο εστιάζει στα επίπεδα:
 - Γυμνάσιο
